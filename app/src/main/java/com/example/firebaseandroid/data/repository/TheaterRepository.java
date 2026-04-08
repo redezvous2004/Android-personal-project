@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.example.firebaseandroid.data.model.Movie;
 import com.example.firebaseandroid.data.model.Showtime;
 import com.example.firebaseandroid.data.model.Theater;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -115,9 +116,9 @@ public class TheaterRepository {
     }
 
     /**
-     * Seed sample theaters
+     * Seed sample theaters and showtimes for provided movies
      */
-    public void seedSampleTheaters() {
+    public void seedSampleTheaters(List<Movie> movies) {
         String[][] theatersData = {
             {"Galaxy Cinema Nguyen Trai", "369 Nguyen Trai, Ward 7, District 5, Ho Chi Minh City", "Ho Chi Minh City"},
             {"CGV Vincom Center Dong Khoi", "72 Nguyen Hue, District 1, Ho Chi Minh City", "Ho Chi Minh City"},
@@ -137,27 +138,41 @@ public class TheaterRepository {
             firestore.collection("theaters").document(theater.getTheaterId())
                     .set(theater)
                     .addOnSuccessListener(aVoid -> {
-                        seedShowtimesForTheater(theater.getTheaterId());
+                        seedShowtimesForTheater(theater.getTheaterId(), movies);
                     });
         }
     }
 
-    private void seedShowtimesForTheater(String theaterId) {
-        // Seed showtimes for the next 7 days
+    /**
+     * Legacy seed method (not recommended as it uses hardcoded movie IDs)
+     */
+    public void seedSampleTheaters() {
+        seedSampleTheaters(new ArrayList<>());
+    }
+
+    private void seedShowtimesForTheater(String theaterId, List<Movie> movies) {
         java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.getDefault());
         java.util.Calendar cal = java.util.Calendar.getInstance();
 
-        String[] times = {"09:00", "11:30", "14:00", "16:30", "19:00", "21:30"};
-        long[] prices = {60000, 70000, 80000};
+        String[] times = {"09:00", "14:00", "19:00"};
+        long[] prices = {60000, 80000};
 
-        for (int day = 0; day < 7; day++) {
+        for (int day = 0; day < 3; day++) {
             String date = sdf.format(cal.getTime());
             for (String time : times) {
                 for (long price : prices) {
                     Showtime showtime = new Showtime();
                     showtime.setShowtimeId(firestore.collection("showtimes").document().getId());
                     showtime.setTheaterId(theaterId);
-                    showtime.setMovieId("sample_movie_" + (int)(Math.random() * 5 + 1));
+                    
+                    // If movies are provided, pick one randomly. Otherwise use legacy ID.
+                    if (movies != null && !movies.isEmpty()) {
+                        int randomIndex = (int)(Math.random() * movies.size());
+                        showtime.setMovieId(movies.get(randomIndex).getMovieId());
+                    } else {
+                        showtime.setMovieId("sample_movie_" + (int)(Math.random() * 5 + 1));
+                    }
+
                     showtime.setDate(date);
                     showtime.setTime(time);
                     showtime.setTotalSeats(100);

@@ -18,6 +18,7 @@ import com.example.firebaseandroid.databinding.ActivityTicketDetailBinding;
 import com.example.firebaseandroid.util.FormatUtils;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
+import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
 import java.util.HashMap;

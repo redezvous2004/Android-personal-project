@@ -152,6 +152,7 @@ public class MovieRepository {
 
         for (String[] data : sampleData) {
             Movie movie = new Movie();
+            // Use auto-generated ID from Firestore
             movie.setMovieId(firestore.collection("movies").document().getId());
             movie.setTitle(data[0]);
             movie.setGenre(data[1]);

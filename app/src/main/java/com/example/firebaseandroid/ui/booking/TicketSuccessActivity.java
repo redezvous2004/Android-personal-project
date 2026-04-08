@@ -3,11 +3,9 @@ package com.example.firebaseandroid.ui.booking;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.firebaseandroid.R;
 import com.example.firebaseandroid.data.model.BookingState;
 import com.example.firebaseandroid.data.model.Ticket;
 import com.example.firebaseandroid.data.repository.NotificationRepository;
@@ -15,6 +13,7 @@ import com.example.firebaseandroid.databinding.ActivityTicketSuccessBinding;
 import com.example.firebaseandroid.ui.main.MainActivity;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
+import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
 import java.util.HashMap;

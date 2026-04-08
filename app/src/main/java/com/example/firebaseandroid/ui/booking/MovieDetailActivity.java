@@ -134,7 +134,7 @@ public class MovieDetailActivity extends AppCompatActivity {
             names[i] = theaters.get(i).getName();
         }
 
-        binding.spinnerTheater.setItem(names);
+        binding.spinnerTheater.setSimpleItems(names);
         binding.spinnerTheater.setOnItemClickListener((adapterView, view, pos, id) -> {
             selectedTheater = theaters.get(pos);
             binding.tvTheaterError.setVisibility(View.GONE);
@@ -192,7 +192,7 @@ public class MovieDetailActivity extends AppCompatActivity {
             Showtime s = list.get(i);
             times[i] = s.getTime() + " - " + FormatUtils.formatPrice(s.getPrice()) + " (" + s.getAvailableSeats() + " seats)";
         }
-        binding.spinnerShowtime.setItem(times);
+        binding.spinnerShowtime.setSimpleItems(times);
         binding.spinnerShowtime.setEnabled(list.size() > 0);
         binding.spinnerShowtime.setOnItemClickListener((adapterView, view, pos, id) -> {
             selectedShowtime = list.get(pos);
