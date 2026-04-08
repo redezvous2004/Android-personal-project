@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movie Ticket</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_tickets">My Tickets</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Auth -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="sign_up_here">Sign up here</string>
+    <string name="sign_in_here">Sign in here</string>
+    <string name="login_success">Login successful!</string>
+    <string name="register_success">Registration successful!</string>
+
+    <!-- Validation Messages -->
+    <string name="error_email_required">Email is required</string>
+    <string name="error_email_invalid">Please enter a valid email</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="error_password_too_short">Password must be at least 6 characters</string>
+    <string name="error_passwords_not_match">Passwords do not match</string>
+    <string name="error_name_required">Full name is required</string>
+    <string name="error_phone_required">Phone number is required</string>
+    <string name="error_phone_invalid">Please enter a valid phone number</string>
+
+    <!-- Home / Movies -->
+    <string name="now_showing">Now Showing</string>
+    <string name="search_movies">Search movies…</string>
+    <string name="no_movies_found">No movies found</string>
+    <string name="loading">Loading…</string>
+    <string name="retry">Retry</string>
+
+    <!-- Movie Detail -->
+    <string name="book_now">Book Now</string>
+    <string name="select_theater">Select Theater</string>
+    <string name="select_showtime">Select Showtime</string>
+    <string name="genre">Genre: %s</string>
+    <string name="duration">Duration: %s min</string>
+    <string name="rating">Rating: %s/10</string>
+    <string name="price_format">%,d VNĐ</string>
+
+    <!-- Theater -->
+    <string name="theater_name">%s</string>
+    <string name="theater_address">%s</string>
+
+    <!-- Showtime -->
+    <string name="showtime_format">%s - %s</string>
+
+    <!-- Booking / Seats -->
+    <string name="select_seats">Select Seats</string>
+    <string name="seats_selected">%d seat(s) selected</string>
+    <string name="seat_row">Row %s</string>
+    <string name="seat_number">Seat %s</string>
+    <string name="total_price">Total: %,d VNĐ</string>
+    <string name="proceed_to_payment">Proceed</string>
+    <string name="seat_available">Available</string>
+    <string name="seat_occupied">Occupied</string>
+    <string name="seat_your_choice">Your choice</string>
+
+    <!-- Confirmation -->
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="movie_name">Movie</string>
+    <string name="theater_info">Theater</string>
+    <string name="showtime_info">Showtime</string>
+    <string name="seats_info">Seats</string>
+    <string name="total_price_info">Total</string>
+    <string name="confirm_and_pay">Confirm &amp; Pay</string>
+    <string name="booking_success">Booking successful!</string>
+    <string name="booking_failed">Booking failed. Please try again.</string>
+
+    <!-- Ticket Success -->
+    <string name="booking_confirmed">Booking Confirmed!</string>
+    <string name="ticket_code">Ticket Code</string>
+    <string name="show_qr_code">Show this QR code at the cinema</string>
+    <string name="share_ticket">Share Ticket</string>
+    <string name="view_tickets">View My Tickets</string>
+    <string name="back_to_home">Back to Home</string>
+
+    <!-- Tickets List -->
+    <string name="my_tickets">My Tickets</string>
+    <string name="no_tickets_yet">No tickets yet</string>
+    <string name="book_movies_hint">Start booking movies to see them here!</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="past">Past</string>
+    <string name="ticket_status_upcoming">Upcoming</string>
+    <string name="ticket_status_watched">Watched</string>
+    <string name="ticket_status_cancelled">Cancelled</string>
+
+    <!-- Ticket Detail -->
+    <string name="ticket_details">Ticket Details</string>
+    <string name="booking_date">Booking Date</string>
+    <string name="cinema_address">Cinema Address</string>
+    <string name="ticket_code_label">Ticket Code</string>
+    <string name="cancel_booking">Cancel Booking</string>
+    <string name="cancel_booking_confirm">Are you sure you want to cancel this booking?</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes_cancel">Yes, Cancel</string>
+
+    <!-- Profile -->
+    <string name="profile">Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="notification_settings">Notification Settings</string>
+    <string name="reminder_before_showtime">Remind me before showtime</string>
+    <string name="reminder_time">Reminder Time</string>
+    <string name="minutes_before">%d minutes before</string>
+    <string name="about_app">About App</string>
+    <string name="version">Version %s</string>
+    <string name="logout_confirm">Are you sure you want to logout?</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">Movie Reminders</string>
+    <string name="notification_channel_desc">Reminders for upcoming movie showtimes</string>
+    <string name="notification_title">Movie Reminder 🎬</string>
+    <string name="notification_body">Your movie \"%s\" starts in %d minutes at %s!</string>
+
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel_action">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_server">Server error. Please try again later.</string>
+
+    <!-- Firebase Auth Errors -->
+    <string name="error_auth_invalid_email">The email address is badly formatted.</string>
+    <string name="error_auth_wrong_password">Incorrect password.</string>
+    <string name="error_auth_user_not_found">No account found with this email.</string>
+    <string name="error_auth_email_in_use">This email is already registered.</string>
+    <string name="error_auth_weak_password">Password should be at least 6 characters.</string>
+    <string name="error_auth_generic">Authentication failed. Please try again.</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_movie_poster">Movie poster</string>
+    <string name="cd_qr_code">QR code for ticket</string>
+    <string name="cd_profile_picture">Profile picture</string>
+    <string name="cd_back">Go back</string>
+    <string name="cd_search">Search</string>
+</resources>
